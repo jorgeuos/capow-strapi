@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '../public/fonts/Familjen_Grotesk/familjen-grotesk.css';
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "familjen-grotesk", Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+  }
+
+  .font-grotesk{
+    font-family: "familjen-grotesk", Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+.content a {
+  text-decoration: underline;
+}
