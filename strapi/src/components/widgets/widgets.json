@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_widgets_widgets",
+  "info": {
+    "displayName": "Widgets"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "techs",
+  "info": {
+    "singularName": "tech",
+    "pluralName": "techs",
+    "displayName": "Tech",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "techHero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "hero.hero"
+    }
+  }
+}
