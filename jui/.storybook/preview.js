@@ -1,7 +1,7 @@
 /** @type { import('@storybook/react').Preview } */
 
-import '../styles/globals.css';
 import { withThemeByDataAttribute } from '@storybook/addon-styling';
+import '../styles/globals.scss';
 
 const preview = {
   parameters: {
@@ -27,3 +27,14 @@ export const decorators = [
     attributeName: 'data-mode',
   }),
 ];
+
+//👇 Configures Storybook to log the actions( onArchiveTask and onPinTask ) in the UI.
+export const parameters = {
+  actions: { argTypesRegex: '^on[A-Z].*' },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/,
+    },
+  },
+};
