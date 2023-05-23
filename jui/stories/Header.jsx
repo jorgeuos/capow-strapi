@@ -1,7 +1,7 @@
 // ./src/stories/Header.js
 
 import React from 'react';
-import { Button } from './Button';
+import { Button } from '../components/Buttons/Button';
 import './header.css';
 
 export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (

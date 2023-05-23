@@ -1,0 +1,15 @@
+@import './functions';
+
+.j-lang-wrapper{
+    display: block;
+    position: absolute;
+    top: rem-calc(5);
+    right: rem-calc(20);
+}
+.j-lang-switcher{
+  width: rem-calc(24);
+  height: rem-calc(24);
+    &:hover{
+        cursor: pointer;
+    }
+}

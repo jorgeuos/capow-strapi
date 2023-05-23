@@ -12,7 +12,7 @@ const Post = ({ post, content }) => {
                     </span>
                 </h1>
                 <div
-                    className="tracking-wide font-normal text-sm content"
+                    className="tracking-wide font-normal content"
                     dangerouslySetInnerHTML={{ __html: content }}
                 ></div>
             </div>

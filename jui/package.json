@@ -39,6 +39,7 @@
     "eslint-config-next": "13.3.0",
     "eslint-plugin-storybook": "^0.6.11",
     "postcss": "^8.4.22",
+    "sass": "^1.62.0",
     "storybook": "^7.0.6",
     "tailwindcss": "^3.3.1"
   }

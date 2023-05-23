@@ -3,20 +3,17 @@ import { fetcher } from '../lib/api';
 import Posts from '../components/Posts/Posts';
 import useSWR from 'swr';
 import { useState } from 'react';
+import Title from '../components/Texts/Title';
 
 const PostsList = ({ posts }) => {
     const [pageIndex, setPageIndex] = useState(1);
     const { data } = useSWR(`${process.env.NEXT_PUBLIC_STRAPI_URL}/posts?pagination[page]=${pageIndex}&pagination[pageSize]=2`, fetcher, {
         fallbackData: posts,
     });
-    console.log(data);
+    // console.log(data);
     return (
-        <Layout>
-            <h1 className='font-extrabold text-5xl leading-tighter mb-4'>
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400 py-2">
-                This is Posts
-                </span>
-            </h1>
+      <Layout>
+        <Title text="This is Posts" />
             <Posts posts={posts} />
 
       <div className="space-x-2 space-y-2">
@@ -56,7 +53,7 @@ export async function getStaticProps() {
         `${process.env.NEXT_PUBLIC_STRAPI_URL}/posts?pagination[page]=1&pagination[pageSize]=2`
     );
     // const posts = await res.json();
-    console.log(res);
+    // console.log(res);
     return {
         props: {
             posts: res,
