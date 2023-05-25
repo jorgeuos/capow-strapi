@@ -9,16 +9,10 @@ import { useRouter } from 'next/router';
 const About = ({ page, content }) => {
     const router = useRouter();
     const { locale } = router;
-  console.log('locale in about');
-  console.log(locale);
     if (locale !== 'sv') {
         useEffect(() => {
             return () => {
-                console.log('locale is not en');
-                console.log(page);
                 const redirectSlug = page.attributes.localizations.data[0].attributes.slug;
-                console.log('redirect');
-                console.log(`/${ locale }/${ redirectSlug }`);
                 const redirectTo = `/${locale}/${redirectSlug}`;
                 router.push(redirectTo);
             }

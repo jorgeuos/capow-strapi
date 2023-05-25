@@ -1,0 +1,18 @@
+
+@import './functions.scss';
+
+.troughTheLookingGlass{
+  background-image: url('../../public/images/O.svg');
+  background-repeat: no-repeat;
+  // transform: translateY(30%) translateX(500%);
+  transition: transform ease-out 1s;
+  // height: rem-calc(512);
+  // width: rem-calc(420);
+  height: rem-calc(256);
+  width: rem-calc(210);
+  background-position:0% 0%;
+  background-size: 100%;
+  position: fixed;
+  z-index: -3;
+  top: auto;
+}

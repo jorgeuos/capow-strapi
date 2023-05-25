@@ -6,7 +6,6 @@ import { fetcher } from '../lib/api';
 import markdownToHtml from '../lib/markdownToHtml';
 
 const Tech = ({techs}) => {
-  console.log(techs);
   return (
     <>
       <Layout>

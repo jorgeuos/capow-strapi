@@ -1,0 +1,36 @@
+
+@import './functions';
+
+.hero{
+    background-image: url("/images/Jorgeuos-background-black.svg");
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+    // min-height: calc(100vh - 80px);
+    min-height: 100vh;
+    // background-position: 0% 0%;
+    // background-size: 100%;
+    // padding: 4rem 2rem 1rem;
+    // >>>>
+    padding-bottom: rem-calc(132);
+    // pointer-events: 'none';
+    // z-index: -1;
+    position: relative;
+    overflow: hidden;
+
+    // display: flex;
+    // justify-content: center;
+    // justify-content:floor($number: 30px);
+    // align-content: floor($number: 30px);
+    // justify-content: flex-end;
+    // align-content: flex-end;
+    // flex-direction: column;
+}
+
+.heroHeading{
+    color: #FCFCFC;
+    background-color: #303030;
+    padding: rem-calc(30);
+    position: relative;
+    z-index: 1;
+}

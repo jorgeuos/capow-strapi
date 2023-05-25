@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Nav from './Nav/Nav';
+import Hero, { HeroType } from './Hero/Hero';
 
 type LayoutProps = {
     children: React.ReactNode
@@ -13,14 +14,18 @@ type Locale = {
     locale: string
 }
 
-const Layout = ({ children }: LayoutProps, { title }: TitleProps) => {
+const Layout = ({ children, title, pageHero }) => {
+    console.log('Layout pageHero', pageHero);
     return (
     <>
         <Head>
             <title>{ title && title || "Jorgeuos" }</title>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         </Head>
-        <Nav />
+            <Nav />
+            {pageHero &&
+                <Hero {...pageHero} />
+            }
         <main>
             <div className="
             flex

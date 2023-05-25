@@ -23,17 +23,15 @@ const Tech = ({ page, content, techs, locale }) => {
               return (
                 <>
                   {/* ${titleOrder} */}
-              <div className={`flex border-t border-gray-200 `}>
-                <div className={`basis-2/3`}>
-                  <h3 className={``}>{tech.attributes.title}</h3>
-                </div>
-              </div>
-              <div className='flex flex-row  mb-10'>
-                <div className={`basis-2/3 ${excerptOrder}`}>
-                  <p className="font-normal">{tech.attributes.excerpt}</p>
-                </div>
-                <div className={`basis-1/3 ${imageOrder} pr-6`}>
-                  <img src={`http://localhost:1337${tech.attributes.thumbnail.data.attributes.url}`} />
+              <div className='flex flex-row  py-10 border-t border-gray-200'>
+                <div className={`flex`}>
+                  <div className={`basis-2/3 ${excerptOrder} pr-3`}>
+                    <h3 className={``}>{tech.attributes.title}</h3>
+                    <p className="font-normal">{tech.attributes.excerpt}</p>
+                  </div>
+                  <div className={`basis-1/3 ${imageOrder} pr-6`}>
+                    <img src={`http://localhost:1337${tech.attributes.thumbnail.data.attributes.url}`} />
+                  </div>
                 </div>
               </div>
               </>
