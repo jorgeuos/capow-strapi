@@ -1,0 +1,98 @@
+
+@import './functions.scss';
+
+/* Fluid */
+@keyframes move {
+  from {
+    left: 10%;
+  }
+  to {
+    left: 90%;
+  }
+}
+@keyframes move-2 {
+  to {
+    left: 90%;
+  }
+}
+@keyframes marker {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+@keyframes marker-2 {
+  0%   {left: -20%; top: 50%;}
+  25%  {left: 25%; top: 25%;}
+  // 50%  {left: 50%; top: 50%;}
+  75%  {left: 75%; top: 75%;}
+  100%  {left: 120%; top: 50%;}
+}
+
+@keyframes marker-1 {
+  0%   {left: 0%; top: 50%;}
+  13%  {left: 25%; top: 25%;}
+  26%  {left: 50%; top: 50%;}
+  39%  {left: 75%; top: 75%;}
+  50%  {left: 100%; top: 50%;}
+  63%  {left: 75%; top: 75%;}
+  76%  {left: 50%; top: 50%;}
+  89%  {left: 25%; top: 25%;}
+  100% {left: 0%; top: 50%;}
+}
+.marker{
+  background-image: url('../../public/images/Marker-red.svg');
+  background-repeat: no-repeat;
+  // transform: translateY(30%) translateX(500%);
+  transition: transform ease-out 1s;
+  height: rem-calc(128);
+  width: rem-calc(128);
+  background-position:0% 0%;
+  background-size: 100%;
+  position: absolute;
+  // z-index: -1;
+  // top: auto;
+  top: 10%;
+  left: rem-calc(-128);
+  // transform: translate(50%,-50%);
+  // rotate: -35deg;
+  // animation:  marker 5s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
+  // animation:  marker 5s infinite cubic-bezier(0.73, 0, 0.33, 1);
+  // animation:  marker 5s infinite alternate ease-in-out;
+  // offset-path: path("M1 141.5C1 141.5 103.851 2.00307 198.5 0.999614C294.586 -0.019085 400.5 141.5 400.5 141.5C400.5 141.5 505.437 279.5 600.25 279.5C695.063 279.5 800 141.5 800 141.5");
+  // offset-path: path("M 0,200 Q 200,200 260,80 Q 290,20 400,0 Q 300,100 400,200");
+  // motion-path: path("M18.45,58.46s52.87-70.07,101.25-.75,101.75-6.23,101.75-6.23S246.38,5.59,165.33,9.08s-15,71.57-94.51,74.56S18.45,58.46,18.45,58.46Z");
+  // offset-path: path("M18.45,58.46s52.87-70.07,101.25-.75,101.75-6.23,101.75-6.23S246.38,5.59,165.33,9.08s-15,71.57-94.51,74.56S18.45,58.46,18.45,58.46Z");
+  // offset-path: ray(0, 100%, 'contain'), path("M1 307.23C1 307.23 206.831 3.19896 396.247 1.01193C588.539 -1.20832 800.5 307.23 800.5 307.23C800.5 307.23 1010.51 608 1200.25 608C1389.99 608 1600 307.23 1600 307.23");
+  offset-path: path("M1 227.444C1 227.444 130.819 456.344 250.285 457.991C371.565 459.663 505.25 227.444 505.25 227.444C505.25 227.444 637.702 1.00001 757.375 1.00001C877.048 1.00001 1009.5 227.444 1009.5 227.444C1009.5 227.444 1139.32 456.344 1258.79 457.991C1380.07 459.663 1513.75 227.444 1513.75 227.444C1513.75 227.444 1646.2 1.00001 1765.88 1.00001C1885.55 1.00001 2018 227.444 2018 227.444");
+  offset-path: ray(45deg closest-side contain);
+  // animation:  marker 10s infinite ease-in-out;
+  animation:  marker 15s infinite linear;
+}
+
+@media (min-width:1840px) {
+  .marker{
+    animation:  marker 15s infinite alternate-reverse linear;
+  }
+}
+
+// <svg width="801" height="280" viewBox="0 0 801 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+// <path d="M1 141.5C1 141.5 103.851 2.00307 198.5 0.999614C294.586 -0.019085 400.5 141.5 400.5 141.5C400.5 141.5 505.437 279.5 600.25 279.5C695.063 279.5 800 141.5 800 141.5" stroke="black"/>
+// </svg>
+// <svg width="1601" height="609" viewBox="0 0 1601 609" fill="none" xmlns="http://www.w3.org/2000/svg">
+// <path d="M1 307.23C1 307.23 206.831 3.19896 396.247 1.01193C588.539 -1.20832 800.5 307.23 800.5 307.23C800.5 307.23 1010.51 608 1200.25 608C1389.99 608 1600 307.23 1600 307.23" stroke="black"/>
+// </svg>
+
+// <svg width="1584" height="609" viewBox="0 0 1584 609" fill="none" xmlns="http://www.w3.org/2000/svg">
+// <path d="M1 307.23C1 307.23 204.643 3.19896 392.045 1.01193C582.293 -1.20832 792 307.23 792 307.23C792 307.23 999.773 608 1187.5 608C1375.23 608 1583 307.23 1583 307.23" stroke="black"/>
+// </svg>
+// <svg width="1698" height="609" viewBox="0 0 1698 609" fill="none" xmlns="http://www.w3.org/2000/svg">
+// <path d="M1 307.23C1 307.23 219.318 3.19896 420.224 1.01193C624.181 -1.20832 849 307.23 849 307.23C849 307.23 1071.74 608 1273 608C1474.26 608 1697 307.23 1697 307.23" stroke="black"/>
+// </svg>
+
+// <svg width="2019" height="459" viewBox="0 0 2019 459" fill="none" xmlns="http://www.w3.org/2000/svg">
+// <path d="M1 227.444C1 227.444 130.819 456.344 250.285 457.991C371.565 459.663 505.25 227.444 505.25 227.444C505.25 227.444 637.702 1.00001 757.375 1.00001C877.048 1.00001 1009.5 227.444 1009.5 227.444C1009.5 227.444 1139.32 456.344 1258.79 457.991C1380.07 459.663 1513.75 227.444 1513.75 227.444C1513.75 227.444 1646.2 1.00001 1765.88 1.00001C1885.55 1.00001 2018 227.444 2018 227.444" stroke="#13EA18"/>
+// </svg>
+

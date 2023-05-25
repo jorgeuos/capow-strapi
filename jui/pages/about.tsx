@@ -8,14 +8,8 @@ import { useRouter } from 'next/router';
 
 const About = ({ page, content }) => {
   const { locale } = useRouter();
-  console.log('locale in about');
-  console.log(locale);
   if (locale !== 'en') {
-    console.log('locale is not en');
-    console.log(page);
     const redirectSlug = page.attributes.localizations.data[0].attributes.slug;
-    console.log('redirect');
-    console.log(`/${ locale }/${ redirectSlug }`);
     const redirectTo = `/${locale}/${redirectSlug}`;
     useRouter().push(redirectTo);
   }
@@ -23,7 +17,7 @@ const About = ({ page, content }) => {
   return (
     <>
       {page.attributes ? (
-        <Page title={page.attributes.title}>
+        <Page title={page.attributes.title} page={page}>
           <Title text={page.attributes.title} />
           <div
             className='tracking-wide font-normal text-md content space-y-6 mb-6'
@@ -31,7 +25,7 @@ const About = ({ page, content }) => {
           ></div>
         </Page>
       ) : (
-        <Page title='No content'>
+        <Page title='No content' page={page}>
           <Title text='No content' />
           "No content"
         </Page>

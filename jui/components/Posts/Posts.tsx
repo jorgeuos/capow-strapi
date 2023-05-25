@@ -1,14 +1,13 @@
 import Link from 'next/link';
 
 const Posts = ({ posts }) => {
-    console.log(posts);
     return (
         <>
             <ul>
                 {posts &&
                     posts.data.map((post) => {
                         return (
-                            <li key={post.id}>
+                            <li key={post.id} className='mb-4'>
                                 <Link href={`post/` + post.attributes.slug}>
                                     {post.attributes.title}
                                 </Link>

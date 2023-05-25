@@ -77,7 +77,6 @@ function getRoutes(locale: string = 'en') {
 
 const Nav = () => {
   const { locale } = useRouter();
-  console.log('locale', locale);
   const mainNav = getRoutes(locale);
 
 

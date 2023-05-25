@@ -36,9 +36,9 @@ const Title = ({ text, primary=null, size=null, ...props }) => {
     }, [primary]);
 
     return (
-        <h1 className={`${BASE_TITLE_CLASSES} ${computedClasses}`} {...props}>
+        <h2 className={`${BASE_TITLE_CLASSES} ${computedClasses}`} {...props}>
             <span className={`${spanClasses}`}>{text}</span>
-        </h1>
+        </h2>
     );
 };
 

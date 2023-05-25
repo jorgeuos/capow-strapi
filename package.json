@@ -1,0 +1,10 @@
+{
+    "name": "Jorgeuos Webpage",
+    "version": "1.0.0",
+    "description": "Jorgeuos Webpage",
+    "scripts": {
+        "dev": "cd strapi && npm run develop & cd jui && npm run dev",
+        "build": "rsync -avz strapi/public jui/public & cd strapi && npm run build & cd jui && npm run build",
+        "sync": "rsync -avz strapi/public/* jui/public"
+    }
+}

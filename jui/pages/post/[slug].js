@@ -23,7 +23,6 @@ const Post = ({ post, content }) => {
 export async function getServerSideProps({ params }) {
     const { slug } = params;
     const postResponse = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/slugify/slugs/post/${slug}`);
-    // console.log(postResponse);
     // const post = await postResponse.json();
     // return {
     //     props: {
