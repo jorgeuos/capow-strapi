@@ -5,6 +5,7 @@ import Title from '../components/Texts/Title';
 import { fetcher } from '../lib/api';
 import markdownToHtml from '../lib/markdownToHtml';
 import { useRouter } from 'next/router';
+import Footer from '../components/Footer/Footer';
 
 const About = ({ page, content }) => {
   const { locale } = useRouter();
@@ -17,7 +18,7 @@ const About = ({ page, content }) => {
   return (
     <>
       {page.attributes ? (
-        <Page title={page.attributes.title} page={page}>
+        <Page title={page.attributes.title} page={page} locale={locale}>
           <Title text={page.attributes.title} />
           <div
             className='tracking-wide font-normal text-md content space-y-6 mb-6'
@@ -25,7 +26,7 @@ const About = ({ page, content }) => {
           ></div>
         </Page>
       ) : (
-        <Page title='No content' page={page}>
+        <Page title='No content' page={page} locale={locale}>
           <Title text='No content' />
           "No content"
         </Page>
@@ -36,8 +37,14 @@ const About = ({ page, content }) => {
 export default About;
 
 export async function getStaticProps() {
+
+  const populate = [
+    'og_settings',
+    'og_settings.image',
+  ];
+  const populateString = populate.map((p, i) => `populate[${i}]=${p}`).join('&');
   const resultPage = await fetcher(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/slugify/slugs/page/about-us?populate=*`,
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/slugify/slugs/page/about-us?populate=*&${populateString}`,
   );
 
   if (resultPage.data) {

@@ -1,8 +1,15 @@
 {
   "collectionName": "components_widgets_dynamic_contents",
   "info": {
-    "displayName": "Dynamic Content"
+    "displayName": "Dynamic Content",
+    "description": ""
   },
   "options": {},
-  "attributes": {}
+  "attributes": {
+    "techs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tech.tech"
+    }
+  }
 }

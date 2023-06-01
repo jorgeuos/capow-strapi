@@ -1,0 +1,31 @@
+
+.k8sWrapper{
+  .k8sLogo{
+      .k8sPath1{
+          fill: #5F5F5F;
+          transition: fill 0.3s ease-in;
+      }
+      .k8sPath2{
+          fill:white;
+          transition: fill 0.3s ease-in;
+      }
+      .k8sPath3{
+          fill: white;
+          transition: fill 0.3s ease-in;
+      }
+  }
+  &:hover{
+      .k8sLogo{
+          // transition: LLcubic-bezier(0.075, 0.82, 0.165, 1);
+          .k8sPath1 {
+              fill: #326DE6;
+          }
+          .k8sPath2 {
+              fill: white
+          }
+          .k8sPath3 {
+              fill: white;
+          }
+      }
+  }
+}

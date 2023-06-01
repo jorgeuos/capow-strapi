@@ -1,0 +1,61 @@
+.strapiWrapper {
+    .strapiLogo {
+        .strapiPath1 {
+            fill: #848181;
+            transition: fill 0.3s ease-in;
+        }
+
+        .strapiPath2 {
+            fill: white;
+            transition: fill 0.3s ease-in;
+        }
+
+        .strapiPath3 {
+            fill: white;
+            transition: fill 0.3s ease-in;
+        }
+
+        .strapiPath4 {
+            fill: #DADADA;
+            transition: fill 0.3s ease-in;
+        }
+
+        .strapiPath5 {
+            fill: #DADADA;
+            transition: fill 0.3s ease-in;
+        }
+
+        .strapiPath6 {
+            fill: #DADADA;
+            transition: fill 0.3s ease-in;
+        }
+    }
+
+    &:hover {
+        .strapiLogo {
+            .strapiPath1 {
+                fill: #4945FF;
+            }
+
+            .strapiPath2 {
+                fill: #FFFFFF;
+            }
+
+            .strapiPath3 {
+                fill: #4945FF;
+            }
+
+            .strapiPath4 {
+                fill: #9593FF;
+            }
+
+            .strapiPath5 {
+                fill: #9593FF;
+            }
+
+            .strapiPath6 {
+                fill: #9593FF;
+            }
+        }
+    }
+}

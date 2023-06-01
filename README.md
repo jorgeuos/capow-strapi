@@ -9,10 +9,13 @@ Built and configured from these tutorials:
 
 ## Nextjs
 
+I haven't implemented Typescript fully yet, but I'm using the following tutorials:ß
+
 * [Next.js Typescript](https://nextjs.org/docs/basic-features/typescript)
 
 ## Storybook
 
+I'm still learning Storybook, but I'm using it to build components in isolation. I'm using the following tutorials:
 * [Introduktion(Watch the video!)](https://storybook.js.org/docs/react/writing-stories/introduction)
 
 

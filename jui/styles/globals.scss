@@ -1,12 +1,41 @@
+@import '../public/fonts/Familjen_Grotesk/familjen-grotesk.css';
+@import '../public/fonts/Nunito/nunito.css';
 @tailwind base;
+
+// Extending Preflight
+// If you’d like to add your own base styles on top of Preflight, simply add them to your CSS using the @layer base directive:
+// https://tailwindcss.com/docs/preflight#extending-preflight
+@layer base {
+  h1 {
+    @apply text-4xl;
+    @apply md:text-7xl;
+    @apply leading-relaxed;
+  }
+  // h2 {
+  //   @apply text-xl;
+  // }
+  // h3 {
+  //   @apply text-lg;
+  // }
+  // a {
+  //   @apply text-blue-600 underline;
+  // }
+  p {
+    @apply mb-4;
+    @apply text-base;
+    @apply md:text-lg;
+  }
+}
+
+
 @tailwind components;
 @tailwind utilities;
-@import '../public/fonts/Familjen_Grotesk/familjen-grotesk.css';
+@import 'functions';
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "familjen-grotesk", Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 900;
-    margin-top: 20px;
+    // margin-top: 20px;
     margin-bottom: 20px;
 
   }
@@ -23,10 +52,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-h1 {
-  font-size: 4rem;
-  // text-shadow: 1px 1px 4px rgb(0 0 0 / 50%);
-}
+// h1 {
+//   font-size: 4rem;
+//   // text-shadow: 1px 1px 4px rgb(0 0 0 / 50%);
+// }
 
 h2 {
   font-size: 3rem;
@@ -36,3 +65,160 @@ h3 {
   font-size: 2rem;
 }
 
+
+.blocks {
+  margin: 10px;
+  padding: 20px 20px 40px;
+}
+
+.hero {
+  margin: 0;
+}
+
+.card {
+  max-width: 80px;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.quote {
+  margin-top: 100px;
+}
+
+#matomo-logo {
+  &:hover {
+    #matomo-1 {
+      fill: #35BFC0;
+    }
+  }
+}
+
+.indexForm {
+  padding-bottom: rem-calc(100);
+}
+
+.firstSection {
+  background-image: url("/images/Jorgeuos-background-black.svg");
+  color: #000;
+  margin: 0;
+  padding-top: rem-calc(100);
+  padding-bottom: rem-calc(100);
+  margin-bottom: rem-calc(50);
+  max-width: 100%;
+  min-width: 100%;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.secondSection {
+  // background-color: rgba(48, 48, 48, 0.8);
+  background-image: url("/images/Jorgeuos-background-white.svg");
+  margin: 0;
+  padding-top: rem-calc(100);
+  padding-bottom: rem-calc(100);
+  max-width: 100%;
+  min-width: 100%;
+  width: 100%;
+  min-height: 100vh;
+
+  .firstUsp {
+    background-color: rgba(252, 252, 252, 0.75);
+    color: #303030;
+    margin: 0 auto;
+    // padding: rem-calc(20);
+  }
+}
+
+.thirdSection {
+  background-image: url("/images/Jorgeuos-background-grey.svg");
+  color: #000;
+  margin: 0;
+  padding-top: rem-calc(100);
+  // padding-bottom: rem-calc(100);
+  max-width: 100%;
+  min-width: 100%;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.fourthSection {
+  background-image: url("/images/Jorgeuos-background-dark.svg");
+  color: #000;
+  margin: 0;
+  padding-top: rem-calc(100);
+  padding-bottom: rem-calc(100);
+  max-width: 100%;
+  min-width: 100%;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.fifthSection {
+  background-image: url("/images/Jorgeuos-background-full.svg");
+  color: #000;
+  margin: 0;
+  padding-top: rem-calc(100);
+  padding-bottom: 0;
+  max-width: 100%;
+  min-width: 100%;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.techWrap {
+  max-width: 128px;
+  margin: 20px auto;
+}
+
+.profilePicContainer{
+  margin: 0;
+  padding: 0;
+  display: inherit;
+}
+
+.chatGPT {
+  padding-top: rem-calc(60);
+  text-align: center;
+}
+
+.chatGPT form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: rem-calc(320);
+}
+.chatGPT input[type="text"] {
+  padding: rem-calc(12) rem-calc(16);
+  border: rem-calc(1) solid #10a37f;
+  border-radius: rem-calc(4);
+  margin-bottom: rem-calc(24);
+}
+.chatGPT ::placeholder {
+  color: #8e8ea0;
+  opacity: 1;
+}
+.chatGPT input[type="submit"] {
+  padding: rem-calc(12) 0;
+  color: #fff;
+  background-color: #10a37f;
+  border: none;
+  border-radius: rem-calc(4);
+  text-align: center;
+  cursor: pointer;
+}
+
+.chatGPT .icon {
+  width: rem-calc(128);
+  margin: 0 auto;
+}
+
+.chatGPT .result {
+  padding-top: rem-calc(60);
+  padding-bottom: rem-calc(60);
+  font-weight: bold;
+  margin-top: rem-calc(40);
+  max-width: rem-calc(600);
+  margin: 0 auto;
+}

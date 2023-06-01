@@ -18,11 +18,9 @@ export default function Hero({ title, image, lookingGlass, marker }) {
   // const imageFallback = 'background-image: url(pics/img.webp), url(pics/img.png);';
   image = image.data.attributes.url;
   const imageStyle = image ? `backgroundImage: 'url("${image}")'` : `backgroundImage: 'url("${defaultImage}")'`;
-  console.log('image', image);
-  console.log('title', title);
   return (
     <div
-      className={`${cn(heroStyles.hero)} flex justify-center items-center place-items-end bg-right-top md:bg-top bg-cover bg-fixed px-6`}
+      className={`${cn(heroStyles.hero)} flex justify-center items-center place-items-end bg-top bg-cover bg-fixed px-6 `}
       style={{ backgroundImage: `url("${image}")` }}
       // ${imageStyle}
       // bg-fixed
@@ -37,7 +35,7 @@ export default function Hero({ title, image, lookingGlass, marker }) {
         <MouseMove></MouseMove>
       )}
         <section className={
-        `${heroStyles.heroHeading} text-center max-w-4xl rounded-xl`}>
+        `${heroStyles.heroHeading} text-center max-w-4xl rounded-xl shadow-lg shadow-black/50`}>
           <h1>{title}</h1>
         </section>
     </div>

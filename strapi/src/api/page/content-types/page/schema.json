@@ -61,6 +61,16 @@
       },
       "type": "uid",
       "targetField": "title"
+    },
+    "og_settings": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "og.open-graph"
     }
   }
 }

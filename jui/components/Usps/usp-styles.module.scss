@@ -1,0 +1,49 @@
+@import './functions';
+
+.techWrap{
+  max-width: rem-calc(128);
+  margin: rem-calc(20) auto;
+}
+
+.blocks{
+  margin: rem-calc(10);
+}
+.linkBlocks{
+  &:hover{
+    text-decoration: none;
+    .blockInner{
+      // border: 1px solid #501b8a;
+      // background-color: rgba(233, 213, 255, 0.95);
+    }
+  }
+  h3{
+    text-decoration: none;
+  }
+}
+
+.blockInner{
+  transition:
+    background-color 0.3s ease-in,
+    border 0.3s ease-in;
+  // background-color: rgba(233, 213, 255, 0.6);
+  // border: 1px solid rgba(233, 213, 255, 0.95);
+  padding: rem-calc(20) rem-calc(20)  rem-calc(40);
+  height: 100%;
+  // &:hover{
+  // }
+}
+// .techWrap{
+//   background-color: transparent;
+//   &.aos-animate{
+//     background-color: #e9d5ff;
+//   }
+// }
+
+
+@import './styles/matomo.scss';
+@import './styles/wordpress.scss';
+@import './styles/nextjs.scss';
+@import './styles/strapi.scss';
+@import './styles/vuejs.scss';
+@import './styles/kubernetes.scss';
+
