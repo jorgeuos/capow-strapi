@@ -1,0 +1,23 @@
+
+.wordpressWrapper{
+  .wordpressLogo{
+      .wordpressPath1{
+          fill: #787878;
+          transition: fill 0.3s ease-in;
+      }
+      .wordpressPath2{
+          fill:#787878;
+          transition: fill 0.3s ease-in;
+      }
+  }
+  &:hover{
+      .wordpressLogo{
+          .wordpressPath1{
+              fill: #2E8BC7;
+          }
+          .wordpressPath2{
+              fill:#2E8BC7;
+          }
+      }
+  }
+}

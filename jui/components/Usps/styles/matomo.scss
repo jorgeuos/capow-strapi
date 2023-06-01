@@ -1,0 +1,43 @@
+.matomoWrapper {
+  .matomoLogo {
+    .matomoPath1 {
+      fill: #C0C0C0;
+      transition: fill 0.3s ease-in;
+    }
+
+    .matomoPath2 {
+      fill: #EBEBEB;
+      transition: fill 0.3s ease-in;
+    }
+
+    .matomoPath3 {
+      fill: #B7B7B7;
+      transition: fill 0.3s ease-in;
+    }
+
+    .matomoPath4 {
+      fill: #A3A3A3;
+      transition: fill 0.3s ease-in;
+    }
+  }
+
+  &:hover {
+    .matomoLogo {
+      .matomoPath1 {
+        fill: #95C748;
+      }
+
+      .matomoPath2 {
+        fill: #F38334
+      }
+
+      .matomoPath3 {
+        fill: #35BFC0;
+      }
+
+      .matomoPath4 {
+        fill: #3152A0
+      }
+    }
+  }
+}

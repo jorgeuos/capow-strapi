@@ -3,11 +3,11 @@ import Title from '../components/Texts/Title';
 import { fetcher } from '../lib/api';
 import markdownToHtml from '../lib/markdownToHtml';
 
-const Contact = ({page, content}) => {
+const Contact = ({page, content, locale}) => {
   return (
     <>
       {page.attributes ? (
-        <Page title={page.attributes.title}>
+        <Page title={page.attributes.title} page={page} locale={locale}>
           <Title text={page.attributes.title} />
           <div
             className='tracking-wide font-normal text-md content space-y-6 mb-6'
@@ -15,7 +15,7 @@ const Contact = ({page, content}) => {
           ></div>
         </Page>
       ) : (
-        <Page title='No content'>
+        <Page title='No content' page={page} locale={locale}>
           <Title text='No content' />
           "No content"
         </Page>

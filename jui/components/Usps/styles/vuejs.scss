@@ -1,0 +1,23 @@
+
+.vueWrapper{
+  .vueLogo{
+      .vuePath1{
+          fill:#5F5F5F;
+          transition: fill 0.3s ease-in;
+      }
+      .vuePath2{
+          fill: #C2C2C2;
+          transition: fill 0.3s ease-in;
+      }
+  }
+  &:hover{
+      .vueLogo{
+          .vuePath1 {
+              fill: #35495E;
+          }
+          .vuePath2 {
+              fill: #42B883;
+          }
+      }
+  }
+}
