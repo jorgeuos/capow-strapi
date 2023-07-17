@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 import cn from 'classnames';
 import { useRouter } from 'next/router';
 import UspMatomo from './matomo';
@@ -13,8 +13,7 @@ import aosStyles from 'aos/dist/aos.css';
 import uspStyles from './usp-styles.module.scss';
 import Link from 'next/link';
 
-
-function AllUsps({techs}) {
+function AllUsps({ techs }) {
   const router = useRouter();
   const locale = router.locale;
   useEffect(() => {
@@ -32,66 +31,89 @@ function AllUsps({techs}) {
 
   /**
    * The reason I keep them this way is because I have some animations inside the SVGs that I want to keep.
-  */
+   */
   techs.map((t) => {
-    console.log('t', t.attributes.slug);
+    console.log(t.attributes.slug);
     switch (t.attributes.slug) {
-      case 'matomo' || 'matomo-sv':
-        allTechs.push(<UspMatomo key={t.id}
-          title={t.attributes.title}
-          excerpt={t.attributes.excerpt}
-          slug={t.attributes.slug}
-        ></UspMatomo>);
+      case 'matomo':
+      case 'matomo-sv':
+        allTechs.push(
+          <UspMatomo
+            key={t.id}
+            title={t.attributes.title}
+            excerpt={t.attributes.excerpt}
+            slug={t.attributes.slug}
+          ></UspMatomo>,
+        );
         break;
-      case 'wordpress' || 'wordpress-sv':
-        allTechs.push(<UspWordpress key={t.id}
-          title={t.attributes.title}
-          excerpt={t.attributes.excerpt}
-          slug={t.attributes.slug}
-        ></UspWordpress>);
+      case 'wordpress':
+      case 'wordpress-sv':
+        allTechs.push(
+          <UspWordpress
+            key={t.id}
+            title={t.attributes.title}
+            excerpt={t.attributes.excerpt}
+            slug={t.attributes.slug}
+          ></UspWordpress>,
+        );
         break;
-      case 'nextjs' || 'nextjs-sv':
-        allTechs.push(<UspNextjs key={t.id}
-          title={t.attributes.title}
-          excerpt={t.attributes.excerpt}
-          slug={t.attributes.slug}
-        ></UspNextjs>);
+      case 'nextjs':
+      case 'nextjs-sv':
+        allTechs.push(
+          <UspNextjs
+            key={t.id}
+            title={t.attributes.title}
+            excerpt={t.attributes.excerpt}
+            slug={t.attributes.slug}
+          ></UspNextjs>,
+        );
         break;
-      case 'strapi' || 'strapi-sv':
-        allTechs.push(<UspStrapi key={t.id}
-          title={t.attributes.title}
-          excerpt={t.attributes.excerpt}
-          slug={t.attributes.slug}
-        ></UspStrapi>);
+      case 'strapi':
+      case 'strapi-sv':
+        allTechs.push(
+          <UspStrapi
+            key={t.id}
+            title={t.attributes.title}
+            excerpt={t.attributes.excerpt}
+            slug={t.attributes.slug}
+          ></UspStrapi>,
+        );
         break;
-      case 'vue-js' || 'vuejs-sv':
-        allTechs.push(<UspVuejs key={t.id}
-          title={t.attributes.title}
-          excerpt={t.attributes.excerpt}
-          slug={t.attributes.slug}
-        ></UspVuejs>);
+      case 'vue-js':
+      case 'vuejs-sv':
+        allTechs.push(
+          <UspVuejs
+            key={t.id}
+            title={t.attributes.title}
+            excerpt={t.attributes.excerpt}
+            slug={t.attributes.slug}
+          ></UspVuejs>,
+        );
         break;
-      case 'kubernetes' || 'kubernetes-sv':
-        allTechs.push(<UspKubernetes key={t.id}
-          title={t.attributes.title}
-          excerpt={t.attributes.excerpt}
-          slug={t.attributes.slug}
-        ></UspKubernetes>);
+      case 'kubernetes':
+      case 'kubernetes-sv':
+        allTechs.push(
+          <UspKubernetes
+            key={t.id}
+            title={t.attributes.title}
+            excerpt={t.attributes.excerpt}
+            slug={t.attributes.slug}
+          ></UspKubernetes>,
+        );
         break;
       default:
-        allTechs.push(<UspDefault key={t.id}
-          title={t.attributes.title}
-          excerpt={t.attributes.excerpt}
-          slug={t.attributes.slug}
-        ></UspDefault>);
+        allTechs.push(
+          <UspDefault
+            key={t.id}
+            title={t.attributes.title}
+            excerpt={t.attributes.excerpt}
+            slug={t.attributes.slug}
+          ></UspDefault>,
+        );
         break;
     }
   });
-  return (
-    <>
-      {allTechs}
-    </>
-  );
+  return <>{allTechs}</>;
 }
 
 export default AllUsps;

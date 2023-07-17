@@ -16,7 +16,8 @@ export default function Hero({ title, image, lookingGlass, marker }) {
   // ./capow-strapi/jui/public/public/uploads/Jorgeuos_background_black_8e97123236.svg
   // If we wanna use webp and png fallback e.g.
   // const imageFallback = 'background-image: url(pics/img.webp), url(pics/img.png);';
-  image = image.data.attributes.url;
+
+  image = image && image.data.attributes.url;
   const imageStyle = image ? `backgroundImage: 'url("${image}")'` : `backgroundImage: 'url("${defaultImage}")'`;
   return (
     <div

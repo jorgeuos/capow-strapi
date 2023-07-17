@@ -3,17 +3,27 @@ import { fetcher } from '../../lib/api';
 import markdownToHtml from '../../lib/markdownToHtml';
 import CapowHead from '../../components/Header/CapowHead';
 
-const Post = ({ tech, content }) => {
+const Tech = ({ tech, content }) => {
+
+  let techHero = tech && tech.attributes.techHero || {};
+  const og_settings = tech && tech.attributes.og_settings || {};
+  let title = tech && tech.attributes.title || '';
+  if (title === '') {
+    title = 'Tech not found!';
+    techHero.title = 'No such tech!';
+    content = '<p class="text-center">Try going to the tech list again. <a href="/techs">Techs</a></p>';
+  }
+
   return (
     <>
-      <CapowHead ogSettings={tech.og_settings}>
-        <title>{tech.attributes.title}</title>
+      <CapowHead ogSettings={og_settings}>
+        <title>{title}</title>
       </CapowHead>
-      <Layout title={tech.attributes.title} pageHero={tech.attributes.techHero}>
+      <Layout title={title} pageHero={techHero}>
         <div>
           <h1 className='text-5xl md:text-6xl font-extrabold leading-tighter mb-4'>
             <span className='bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400 py-2'>
-              {tech.attributes.title}
+              {title}
             </span>
           </h1>
           <div
@@ -27,7 +37,7 @@ const Post = ({ tech, content }) => {
   );
 };
 
-export async function getServerSideProps({ params }) {
+export async function getServerSideProps({ params, locale }) {
   const { slug } = params;
 
   const populate = [
@@ -39,7 +49,7 @@ export async function getServerSideProps({ params }) {
   const populateString = populate.map((p) => `populate[]=${p}`).join('&');
 
   const techResponse = await fetcher(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/slugify/slugs/tech/${slug}?&${populateString}`,
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/slugify/slugs/tech/${slug}?&${populateString}&locale=${locale}`,
   );
   // const tech = await techResponse.json();
   // return {
@@ -65,4 +75,4 @@ export async function getServerSideProps({ params }) {
   }
 }
 
-export default Post;
+export default Tech;

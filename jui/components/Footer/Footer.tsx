@@ -1,7 +1,13 @@
 import footerStyles from './footer.module.scss';
+import { useIntl } from 'react-intl';
 
 const Footer = () => {
     const year = new Date().getFullYear();
+    // const allRightsReserved = locale === 'en' ? `All rights reserved.` : `Alla rättigheter förbehållna.`;
+    const intl = useIntl();
+    const allRightsReserved = `${intl.formatMessage({ id: "static.AllRightsReserved" })}`;
+
+
     return (
         <footer className={`flex-shrink-0 md:pt-12 -mt-32 md:-mt-40 ${footerStyles.footerWrapper}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -36,7 +42,7 @@ const Footer = () => {
                     </div>
                     <div className="mt-8 md:mt-0 md:order-1">
                         <p className="text-center text-base text-white">
-                            &copy; {year} Jorgeuos. All rights reserved.
+                            &copy; {year} Jorgeuos. {allRightsReserved}
                         </p>
                     </div>
                 </div>
