@@ -14,7 +14,6 @@ const OmOss = ({ page, content }) => {
   //   const redirectTo = `/${locale}/${redirectSlug}`;
   //   useRouter().push(redirectTo);
   // }
-  console.log(page);
 
   return (
     <>
@@ -45,7 +44,6 @@ export async function getStaticProps() {
   ];
   const populateString = populate.map((p, i) => `populate[${i}]=${p}`).join('&');
   const requestUrl = `${process.env.NEXT_PUBLIC_STRAPI_URL}/slugify/slugs/page/om-oss?populate=*&${populateString}&locale=sv`;
-  console.log('requestUrl', requestUrl);
   const resultPage = await fetcher(
     `${requestUrl}`,
   );

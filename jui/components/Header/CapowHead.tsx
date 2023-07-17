@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Matomo from '../Scripts/Matomo';
+import MtmoLocal from '../Scripts/Mtmo';
 import Meta from '../Meta/Meta';
 
 const CapowHead = ({ ogSettings, children }) => {
@@ -10,6 +11,7 @@ const CapowHead = ({ ogSettings, children }) => {
         <Meta ogSettings={ogSettings}></Meta>
       </Head>
       <Matomo />
+      <MtmoLocal />
     </>
   );
 };

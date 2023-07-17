@@ -81,7 +81,6 @@ export async function getStaticProps(locales) {
   const pageSlug = locale === 'en' ? 'technologies' : 'teknologier';
 
   const requestUrl = `${process.env.NEXT_PUBLIC_STRAPI_URL}/slugify/slugs/page/${pageSlug}?${populateString}&locale=${locale}`;
-  console.log('requestUrl', requestUrl);
 
   // First get the page
   const resultPage = await fetcher(

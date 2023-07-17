@@ -15,6 +15,10 @@ const nextConfig = {
     locales: ['en', 'sv'],
     defaultLocale: 'en',
   },
+  // env: {
+  //   MATOMO_DEVELOPMENT_URL: process.env.MATOMO_DEVELOPMENT_URL,
+  //   MATOMO_PRODUCTION_URL: process.env.MATOMO_PRODUCTION_URL,
+  // }
 }
 
 module.exports = nextConfig

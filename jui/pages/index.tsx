@@ -16,8 +16,7 @@ import Matomo from "../components/Scripts/Matomo";
 
 export default function Home({ locale, page, content, techs }) {
   const pageHero = page.attributes.pageHero;
-  const title = page.attributes.title ? `Jorgeuosss - ${page.attributes.title}` : 'Jorgeuos';
-  // console.log(page);
+  const title = page.attributes.title ? `Jorgeuos - ${page.attributes.title}` : 'Jorgeuos';
 
   return (
     <>
