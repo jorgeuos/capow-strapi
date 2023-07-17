@@ -37,6 +37,30 @@ Next.js
 npm run dev
 ```
 
+#### Install Strapi on server
+
+```sh
+# Install node version manager
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+# Use correct node version
+nvm use
+# Install yarn
+npm install --global yarn
+# Clone down the repo
+git clone git@github.com:jorgeuos/capow-strapi.git
+# Go into the repo
+cd capow-strapi
+# cd into the strapi folder
+cd strapi
+
+# Install packages
+npm install
+```
+
+
+
+
+
 Storybook
 ```sh
 npm run storybook
