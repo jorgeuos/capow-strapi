@@ -4,6 +4,7 @@ export default function MtmoLocal() {
   const trackerUrl = process.env.NODE_ENV === "production" ?
     process.env.NEXT_PUBLIC_MATOMO_PRODUCTION_URL :
     process.env.NEXT_PUBLIC_MATOMO_DEVELOPMENT_URL;
+  console.log("MtmoLocal trackerUrl", trackerUrl);
   return (
     <>
       <Script id="load-mtmo">
