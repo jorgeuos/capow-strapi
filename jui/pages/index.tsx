@@ -1,7 +1,7 @@
 import Layout from '../components/Layout';
 import Head from 'next/head';
 import CapowHead from '../components/Header/CapowHead';
-import Page from '../components/Pages/Page';
+// import Page from '../components/Pages/Page';
 import Nav from '../components/Nav/Nav';
 import Hero from '../components/Hero/Hero';
 import Title from '../components/Texts/Title';
@@ -67,10 +67,11 @@ export default function Home({ locale, page, content, techs }) {
           <Footer />
         </>
       ) : (
-        <Page title='No content' page={page} locale={locale}>
-          <Title text='No content' />
           "No content"
-        </Page>
+        // <Page title='No content' page={page} locale={locale}>
+        //   <Title text='No content' />
+        //   "No content"
+        // </Page>
       )}
     </>
   );
