@@ -92,7 +92,6 @@ const Nav = () => {
             px-4
             text-lg text-gray-700
             bg-white
-            dark:bg-zinc-800
             fixed z-50
             shadow-lg
             shadow-black/30
@@ -158,11 +157,9 @@ const Nav = () => {
                 </Link>
               </li>
             ))}
-            <li>
-                <LangSwitcher></LangSwitcher>
-            </li>
           </ul>
 
+          <LangSwitcher></LangSwitcher>
         </div>
       </nav>
       <div className='h-20'></div>

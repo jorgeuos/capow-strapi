@@ -51,6 +51,16 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: underline;
 }
 
+.custom-gradient {
+  background: linear-gradient(to bottom, 
+      #d6bcfa 0%,   /* purple-200 */
+      #f687b3 20%,  /* pink-400 */
+      #63b3ed 40%,  /* blue-400 */
+      #76e4f7 60%,  /* cyan-400 */
+      #68d391 80%,  /* green-400 */
+      #f6e05e 100%  /* yellow-400 */
+  );
+}
 
 // h1 {
 //   font-size: 4rem;

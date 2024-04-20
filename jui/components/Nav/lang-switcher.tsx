@@ -18,7 +18,7 @@ export default function LangSwitcher() {
             router.push({ pathname, query }, asPath, { locale: nextLocale })
           }}>
               <Image
-              src={ language === 'en' ? '/images/j-lang-sv-light.svg': '/images/j-lang-eng-light.svg' }
+              src={ language === 'en' ? '/images/globe-sv.svg': '/images/globe-en.svg' }
               className={cn(styles["J-lang"])}
               width={24}
               height={24}

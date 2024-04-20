@@ -32,6 +32,7 @@ export default function Home({ locale, page, content, techs }) {
           >
             <main>
               <div
+                id='first-section'
                 className='
                 flex
                 justify-center
@@ -42,7 +43,7 @@ export default function Home({ locale, page, content, techs }) {
                 rounded-lg
                 p-6 md:p-16
                 shadow-lg
-                shadow-indigo-500/40
+                shadow-black/30
                 '
               >
                 <div

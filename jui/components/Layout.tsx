@@ -34,7 +34,8 @@ const Layout = ({ children, title, pageHero }) => {
                     rounded-lg
                     my-16
                     p-6 md:p-16
-                    shadow-lg shadow-indigo-500/40
+                    shadow-lg
+                    shadow-black/30
                     ">
                         <div className="font-medium">
                             {children}

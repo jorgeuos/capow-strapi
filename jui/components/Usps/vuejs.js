@@ -31,7 +31,8 @@ function UspStrapi({title, excerpt, slug}) {
         bg-violet-200/60 dark:bg-violet-900/60
         hover:bg-violet-200/90 dark:hover:bg-violet-900/90
         shadow-lg
-        shadow-violet-500/40`}
+        shadow-black/30
+        `}
       >
         <div className="font-small">
           <div className={`${cn(uspStyles.techWrap)}`}>
