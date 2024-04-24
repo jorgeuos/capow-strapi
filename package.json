@@ -5,6 +5,8 @@
     "scripts": {
         "dev": "cd strapi && npm run develop & cd jui && npm run dev",
         "build": "rsync -avz strapi/public jui/public & cd strapi && npm run build & cd jui && npm run build",
-        "sync": "rsync -avz strapi/public/* jui/public"
+        "sync": "rsync -avz strapi/public/* jui/public",
+        "deploy-install": "cd jui && nvm use && npm install",
+        "deploy-build": "cd jui && npm run build"
     }
 }

@@ -34,6 +34,14 @@ export async function middleware(req: NextRequest) {
         ),
       );
     }
+    if (req.nextUrl.pathname === '/tjanster') {
+      return NextResponse.redirect(
+        new URL(
+          `/en/services`,
+          req.url,
+        ),
+      );
+    }
     if (req.nextUrl.pathname === '/kontakt') {
       return NextResponse.redirect(
         new URL(

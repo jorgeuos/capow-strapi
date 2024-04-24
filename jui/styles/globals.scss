@@ -51,15 +51,36 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: underline;
 }
 
-.custom-gradient {
+.j-bg{
   background: linear-gradient(to bottom, 
-      #d6bcfa 0%,   /* purple-200 */
-      #f687b3 20%,  /* pink-400 */
-      #63b3ed 40%,  /* blue-400 */
-      #76e4f7 60%,  /* cyan-400 */
-      #68d391 80%,  /* green-400 */
-      #f6e05e 100%  /* yellow-400 */
+  #d6bcfa 0%,   /* purple-200 */
+  #f687b3 20%,  /* pink-400 */
+  #63b3ed 40%,  /* blue-400 */
+  #76e4f7 60%,  /* cyan-400 */
+  #68d391 80%,  /* green-400 */
+  #f6e05e 100%  /* yellow-400 */
   );
+  background: linear-gradient(to bottom, 
+  hsl(265, 86%, 86%) 0%,   /* purple-200 */
+  hsl(336, 86%, 75%) 20%,  /* pink-400 */
+  hsl(205, 79%, 66%) 40%,  /* blue-400 */
+  hsl(189, 89%, 72%) 60%,  /* cyan-400 */
+  hsl(143, 55%, 62%) 80%,  /* green-400 */
+  hsl(51, 89%, 67%) 100%  /* yellow-400 */
+  hsl(27, 96%, 61%)  /* orange-400 */
+  );
+}
+.custom-gradient {
+  // &:before {
+  //   content: '';
+  //   display: block;
+  //   position: fixed;
+  //   top: 0;
+  //   height: 100vh;
+  //   width: 100%;
+  // }
+  background-image: url("/images/bg-gradient.svg");
+  background-size: cover;
 }
 
 // h1 {

@@ -13,7 +13,10 @@ export default function LangSwitcher() {
     return (
       <div className={cn(styles["j-lang-wrapper"])}>
         <div
-          className={cn(styles["j-lang-switcher"])}
+          className={`
+          ${cn(styles["j-lang-switcher"])}
+          
+          `}
           onClick={() => {
             router.push({ pathname, query }, asPath, { locale: nextLocale })
           }}>
@@ -22,7 +25,7 @@ export default function LangSwitcher() {
               className={cn(styles["J-lang"])}
               width={24}
               height={24}
-              alt='Language'
+              alt='Language Switcher - Globe Icon'
               />
           </div>
       </div>
